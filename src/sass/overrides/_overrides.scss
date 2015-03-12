@@ -1,0 +1,223 @@
+@import "../helpers/grid_settings";
+@import "../variables/variables";
+@import "../helpers/from_sg";
+
+
+// SURVEY GIZMO
+// ------------------------------------------------------------------
+.sg-header,
+.sg-page-title,
+.sg-powered-by,
+.sg-progress-bar {
+	display: none !important;
+}
+
+
+// Keeping These
+// ------------------------------------------------------------------
+.sg-error-message {
+	display: none;
+}
+
+.sg-error-display {
+	display: block;
+}
+
+// for screen readers I suppose
+.sg-access-helper {
+	display: block;
+	margin-left: -999em;
+	position: absolute !important;
+	width: 100em;
+}
+// ------------------------------------------------------------------
+
+.sg-question {
+	margin-bottom: $sg-question-margin;
+	overflow: hidden;
+	padding: 15px 50px 0 15px;
+	transition: opacity 0.2s ease-out;
+
+	&:first-child {
+		padding-top: 0;
+	}
+
+	.sg-question {
+		padding: 0;
+	}
+
+	@include media($tablet) {
+		padding: 15px 15px 0 15px;
+	}
+
+	/*
+	&.sg-hide {
+		display: block !important;
+		opacity: 0.6;
+		transition: opacity 0.2s ease-out;
+	}
+
+	
+	*/
+}
+
+.dont-display {
+	display: none !important;
+}
+
+.do-display {
+	display: block !important;
+}
+
+.sg-question-options {
+	overflow: hidden;
+}
+
+.sg-required-icon {
+	color: $red;
+}
+
+.sg-list-horizontal {
+	li {
+		float: left;
+		margin-right: 3em;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.sg-button-bar {
+	padding-left: 15px;
+}
+
+.sg-error-message,
+.sg-question-errorlist {
+	background-color: $red;
+	color: #FFFFFF;
+	font-family: $helvetica-font;
+	font-size: em(16);
+	padding: 5px 10px;
+}
+
+.sg-error-message {
+	&.sg-error-display {
+		display: inline-block;
+		margin: 15px 50px 20px 15px;
+	}
+}
+
+.review {
+	border: 0 none;
+	border-radius: 0;
+	padding: 20px;
+}
+
+// Results page
+// ------------------------------------------------------------------
+.question-title {
+	color: $gray_dark;
+	font-family: $helvetica-font;
+	font-size: em(14);
+
+	&:after {
+		content: ' ';
+	}
+}
+
+.question-answers {
+	display: inline-block;
+	font-family: $courier-font;
+	font-size: em(20);
+}
+
+.review {
+	.question-response {
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.question-response-group:last-child {
+		.question-response:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.page-results {
+
+	.hero {
+		min-height: 307px;
+	}
+
+	.hero-congratulations {
+		display: block;
+	}
+
+	.hero-init {
+		display: none;
+	}
+
+	.content-hero {
+		display: block;
+	}
+
+	.sg-question {
+		padding: 0;
+	}
+
+	.sg-question-title {
+		display: none;
+	}
+
+	.sg-type-review {
+		margin-bottom: -10px;
+	}
+
+	.guide {
+		display: none;
+	}
+
+	.confirm-message {
+		display: block;
+	}
+
+	.guide-col {
+		padding-top: 80px;
+	}
+
+	.form-col {
+		padding-top: 40px;
+	}
+
+	.content {
+		background-color: $blue_light;
+	}
+
+	.sg-body {
+		background-color: #FFFFFF;
+		border-radius: 10px;
+		
+		// padding: 20px 10px;
+	}
+
+	.content-disclaimer {
+		display: block;
+	}
+
+	.content-related-posts {
+		display: block;
+	}
+
+	.content-footer-rally {
+		display: block;
+	}
+
+	.wrist-band {
+		display: none;
+	}
+}

@@ -1,0 +1,30 @@
+
+// VARIABLES
+// ------------------------------------------------------------------
+// $sentinel-font: 						"Sentinel A", "Sentinel B"; 		// production
+$sentinel-font: 						"Sentinel";							// dev
+$helvetica-font: 						"Helvetica Neue", HelveticaNeue, Helvetica, sans-serif;
+$courier-font:							Courier;
+
+$group-headline-font: 					$sentinel-font;
+$question-title-font: 					$helvetica-font;
+
+$bold:									600;
+$light:									100;
+
+$headline-margin:						35px;
+$question-title-margin:					10px;
+
+$sg-question-margin:					20px;
+
+$form-border-color: 					rgb(187, 187, 187);
+$form-button-color: 					rgb(105, 187, 233);
+
+$blue:									rgb(105, 187, 233);
+$blue_light:							rgb(224, 237, 249);
+$gray:									rgb(234, 234, 234);
+$gray_med:								rgb(144, 144, 144);
+$gray_dark:								rgb(78, 78, 78);
+$red:									rgb(202,53,51);
+$stroke:								rgb(187, 187, 187);
+$yellow:								rgb(254, 203, 0);

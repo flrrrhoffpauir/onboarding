@@ -1,0 +1,85 @@
+@import "../bourbon/bourbon";
+@import "../variables/variables";
+
+
+// CLASSES ENTERED INTO THE SURVEY GIZMO GUI
+// ------------------------------------------------------------------
+.q-determine-user {
+
+}
+
+.q-personal-info-theirs {
+	background-color: $gray;
+	display: none;
+}
+
+.q-personal-info-yours {
+	/* ... */
+}
+
+.q-contact-method {
+	/* ... */
+}
+
+.q-contact-time {
+	/* ... */
+}
+
+.phone-email-radios {
+	/* see forms.scss */
+}
+
+.headline-standalone {
+	h1 {
+		margin-bottom: 0;
+	}
+}
+
+.q-essay {
+	/* ... */
+}
+
+.toggle-q-essay {
+	&:before {
+		border: 1px solid $blue;
+		border-radius: 50%;
+		color: $blue;
+		content: "\f067";
+		display: inline-block;
+		font: normal normal normal 14px/1 FontAwesome;
+		font-size: inherit;
+		height: 26px;
+		line-height: 27px;
+		text-align: center;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		vertical-align: middle;
+		width: 26px;
+		@include transition(all 0.2s ease-out);
+	}
+
+	&:hover,
+	&:focus {
+		&:before {
+			@include transform(rotate(90deg));
+		}
+	}
+}
+
+.q-privacy-policy {
+	/* ... */
+}
+
+.title-no {
+	> .sg-question-title {
+		display: none;
+	}
+
+	// results page
+	.sg-question-has-errors {
+		.sg-question-title {
+			display: none;
+		}
+	}
+}

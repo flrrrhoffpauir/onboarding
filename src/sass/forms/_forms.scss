@@ -1,0 +1,128 @@
+@import "../bourbon/bourbon";
+@import "../variables/variables";
+
+input,
+textarea {
+	outline: none;
+}
+
+label {
+	font-family: $question-title-font;
+	font-size: em(16);
+}
+
+#{$all-text-inputs},
+select,
+textarea {
+	border: 1px solid $form-border-color;
+	box-shadow: inset 0px 0px 20px rgba(0,0,0,0.12);
+	font-family: $helvetica-font;
+	font-size: em(18);
+	height: 42px;
+	padding: 0 10px;
+	width: 100%;
+	@include transition(all 0.2s ease-out);
+
+	&:hover,
+	&:focus {
+		border: 1px solid darken($form-border-color, 10%);
+		box-shadow: inset 0px 0px 20px rgba(0,0,0,0.2);
+	}
+}
+
+textarea {
+	height: 100px;
+}
+
+#{$all-button-inputs} {
+	background-color: $form-button-color;
+	border: 0 none;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-family: $sentinel-font;
+	font-size: em(26);
+	font-weight: $bold;
+	height: 60px;
+	padding: 0 96px;
+	@include border-bottom-radius(4px);
+	@include border-top-radius(4px);
+	@include transition(all 0.2s ease-out);
+
+	&:hover {
+		background-color: darken($form-button-color, 10%);
+	}
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+
+	&+label {
+		cursor: pointer;
+
+		&:before {
+			background-color: $form-border-color;
+			border: 5px solid $gray;
+			color: #FFFFFF;
+			content: '';
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			height: 27px;
+			line-height: 27px;
+			margin-right: 10px;
+			text-rendering: auto;
+			vertical-align: middle;
+			width: 27px;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			@include border-bottom-radius(27px);
+			@include border-top-radius(27px);
+			@include transition(all 0.2s ease-out);
+		}
+	}
+
+	&:checked {
+		&+label {
+			&:before {
+				background-color: $blue;
+				content: "\f00c";
+				text-align: center;
+			}
+		}
+	}
+}
+
+.phone-email-radios {
+	label {
+		font: normal normal normal 14px/1 FontAwesome;
+		font-size: inherit;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+
+		&:before {
+			color: #FFFFFF;
+			content: '';
+			text-align: center;
+		}
+	}
+
+	input[title="Phone"] {
+		&+label {
+			&:before {
+				content: '\f095';
+				font-size: em(22);
+			}
+		}
+	}
+
+	input[title="Email"] {
+		&+label {
+			&:before {
+				content: '\f0e0';
+				font-size: em(17);
+			}
+		}
+	}
+}

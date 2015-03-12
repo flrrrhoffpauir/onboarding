@@ -1,0 +1,31 @@
+@import "../bourbon/bourbon";
+@import "../variables/variables";
+
+
+// BREAKPOINTS
+// ------------------------------------------------------------------
+@mixin bp() {
+	@media only screen and (max-width: 601px), screen and (max-device-width: 601px) {
+		@content;
+	}
+}
+
+
+// TYPOGRAPHY
+// ------------------------------------------------------------------
+@mixin h1() {
+	font-family: $group-headline-font;
+	font-size: em(24);
+	font-weight: $bold;
+	line-height: 1em;
+	margin-bottom: $headline-margin;
+}
+
+@mixin fa() {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
